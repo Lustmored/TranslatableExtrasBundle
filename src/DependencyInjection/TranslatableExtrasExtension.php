@@ -18,7 +18,6 @@ class TranslatableExtrasExtension extends Extension
 
         $config = $this->processConfiguration($configuration, $configs);
 
-        var_dump($config);
         if ($config['serializer']) {
             $definition = new Definition(TranslationNormalizer::class);
             $definition->setPublic(false);
