@@ -19,6 +19,7 @@
         "symfony/translation": "^5.3"
     },
     "require-dev": {
+        "symfony/serializer": "^5.3"
     },
     "config": {
         "sort-packages": true
