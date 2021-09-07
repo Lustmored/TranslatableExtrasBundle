@@ -27,6 +27,9 @@
         "symfony/serializer": "To automatically translate messages in serializer"
     },
     "autoload": {
+        "files": [
+            "functions.php"
+        ],
         "psr-4": {
             "Lustmored\\TranslatableExtrasBundle\\": "src/"
         }
