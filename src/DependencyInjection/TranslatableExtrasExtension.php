@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Lustmored\TranslatableExtrasBundle\DependencyInjection;
 
 use Lustmored\TranslatableExtrasBundle\Serializer\TranslationNormalizer;
-use Symfony\Component\DependencyInjection\Argument\AbstractArgument;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Extension\Extension;
