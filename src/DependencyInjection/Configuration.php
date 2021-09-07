@@ -11,7 +11,7 @@ class Configuration implements ConfigurationInterface
 
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('translatable_extras');
+        $treeBuilder = new TreeBuilder('lustmored_translatable_extras');
 
         $treeBuilder->getRootNode()
             ->children()
