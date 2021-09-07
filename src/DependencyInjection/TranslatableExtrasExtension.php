@@ -4,9 +4,11 @@ declare(strict_types=1);
 namespace Lustmored\TranslatableExtrasBundle\DependencyInjection;
 
 use Lustmored\TranslatableExtrasBundle\Serializer\TranslationNormalizer;
+use Symfony\Component\DependencyInjection\Argument\AbstractArgument;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Extension\Extension;
+use Symfony\Component\DependencyInjection\Reference;
 
 class TranslatableExtrasExtension extends Extension
 {
@@ -21,6 +23,7 @@ class TranslatableExtrasExtension extends Extension
             $definition = new Definition(TranslationNormalizer::class);
             $definition->setPublic(false);
             $definition->addTag('serializer.normalizer');
+            $definition->addArgument(new Reference('translator'));
             $container->setDefinition(
                 'translatable_extras.normalizer',
                 $definition
