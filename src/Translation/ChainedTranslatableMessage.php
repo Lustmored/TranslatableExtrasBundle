@@ -8,6 +8,7 @@ use Symfony\Contracts\Translation\TranslatableInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use function Symfony\Component\Translation\t;
 
+/** @deprecated Since symfony/translator 5.4 default TranslatableMessage is recursively translating parameters */
 class ChainedTranslatableMessage implements TranslatableInterface
 {
     use TransParamsTrait;
