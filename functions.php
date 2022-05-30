@@ -5,16 +5,7 @@ declare(strict_types=1);
 namespace Lustmored\TranslatableExtrasBundle\Translation;
 
 use JetBrains\PhpStorm\Pure;
-use Symfony\Component\Translation\TranslatableMessage;
 
-if (!function_exists('Lustmored\TranslatableExtrasBundle\Translation\\ct')) {
-    #[Pure]
-    /** @deprecated Since symfony/translator 5.4 default TranslatableMessage is recursively translating parameters */
-    function ct(TranslatableMessage $message, array $parameters = [], string $domain = null): ChainedTranslatableMessage
-    {
-        return new ChainedTranslatableMessage($message, $parameters, $domain);
-    }
-}
 if (!function_exists('Lustmored\TranslatableExtrasBundle\Translation\\ft')) {
     #[Pure]
     function ft(string $format, ...$params): FormattedTranslatableMessage
