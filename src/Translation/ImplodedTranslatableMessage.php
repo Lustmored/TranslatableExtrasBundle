@@ -11,7 +11,7 @@ class ImplodedTranslatableMessage implements TranslatableInterface
     use TransParamsTrait;
 
     public function __construct(
-        private string $glue = '',
+        private readonly string $glue = '',
         array $parameters = []
     ) {
         $this->parameters = $parameters;

@@ -12,7 +12,7 @@ class FormattedTranslatableMessage implements TranslatableInterface
     use TransParamsTrait;
 
     public function __construct(
-        private string $format,
+        private readonly string $format,
         ...$parameters
     ) {
         $this->parameters = $parameters;
